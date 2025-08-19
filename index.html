@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Foxy v12 — Cycle & Wellbeing</title>
+  <meta name="theme-color" content="#0b0f14">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <!-- Firebase compat SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+  <!-- Firebase config + init (ВАЖНО: вставь сюда СВОЙ config, если он отличается) -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyA9wfEBSn5XUTjs2-IhbEsVO-BvxC1AKBs",
+      authDomain: "foxy-c1b5b.firebaseapp.com",
+      projectId: "foxy-c1b5b",
+      storageBucket: "foxy-c1b5b.firebasestorage.app",
+      messagingSenderId: "43617200238",
+      appId: "1:43617200238:web:3d766dd7b7629c26cfde7f",
+      measurementId: "G-ZTQ7TGDR37"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+  </script>
+
+  <!-- App scripts (порядок важен) -->
+  <script src="./memory.js"></script>
+  <script src="./sync.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
